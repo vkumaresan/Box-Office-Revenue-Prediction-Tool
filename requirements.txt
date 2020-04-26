@@ -77,7 +77,7 @@ dill==0.3.0
 distributed==2.5.1
 distro==1.4.0
 dj-database-url==0.5.0
-Django==2.2.6
+Django==2.2.10
 django-heroku==0.3.1
 docker==4.1.0
 docutils==0.15.2
