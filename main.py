@@ -9,12 +9,12 @@ import math
 app = Flask(__name__)
 
 # Load data and model
-fs = gcsfs.GCSFileSystem(project='cloud-computing-272319')
-with fs.open('cloud-computing-272319.appspot.com/features_train.csv') as f:
+fs = gcsfs.GCSFileSystem(project='box-office-revenue-prediction')
+with fs.open('box-office-revenue-prediction/features_train.csv') as f:
     features_train = pd.read_csv(f)
-with fs.open('cloud-computing-272319.appspot.com/features_test.csv') as f:
+with fs.open('box-office-revenue-prediction/features_test.csv') as f:
     features_test = pd.read_csv(f)
-with fs.open('cloud-computing-272319.appspot.com/revenue.csv') as f:
+with fs.open('box-office-revenue-prediction/revenue.csv') as f:
     revenue = pd.read_csv(f)
 
 model = pickle.load(open('model.pkl', 'rb'))
