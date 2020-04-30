@@ -18,7 +18,6 @@ with fs.open('box-office-revenue-prediction/features_test.csv') as f:
 with fs.open('box-office-revenue-prediction/revenue.csv') as f:
     revenue = pd.read_csv(f)
 
-
 # features_train = pd.read_csv('../features_train.csv')
 # features_test = pd.read_csv('../features_test.csv')
 # revenue = pd.read_csv('../revenue.csv')
@@ -29,7 +28,7 @@ revenue.rename(columns={'Unnamed: 0': 'index'}, inplace=True)
 TRAIN_FOLDER = 'train/'
 TEST_FOLDER = 'test/'
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='')
 
 @app.route('/')
 def home():
