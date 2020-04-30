@@ -10,10 +10,30 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 </head>
+<body>
 
-<body style="background: #000;">
  <div class="login">
 	<h1>Box Office Revenue Prediction Tool</h1>
+  <img src="http://storage.googleapis.com/box-office-revenue-prediction/{{ user_image }}" style="max-height: 500px; max-width: 300px;" alt=""/>
+  <h2> {{ movie_text }} </h2>
+  <i> {{ tagline_text }} </i>
+  <br>
+  <br>
+  <mark> {{ actual_text }} </mark>
+
+  <br>
+  <br>
+  <mark> {{ prediction_text }} </mark>
+
+  <br>
+  <br>
+  <div class="characteristics">
+    <h5> {{ release_date_text }} </h5>
+
+    <h5> {{ runtime_text }} </h5>
+
+    <h5> {{ budget_text }} </h5>
+  </div>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
@@ -21,15 +41,14 @@
         <input type="text" name="Movie Name" placeholder="Movie Name" required="False" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict revenue</button>
     </form>
-
+    <form action="{{ url_for('results')}}"method="post">
+      <!-- <input type="text" name="IMDB ID" placeholder="IMDB ID" required="False" /> -->
+        <input type="text" name="Movie Name" placeholder="Movie Name" required="False" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict revenue (receive JSON)</button>
+    </form>
    <br>
    <br>
-   {{ actual_text }}
-
    <br>
-   <br>
-   {{ prediction_text }}
-
  </div>
 </body>
 </html>
