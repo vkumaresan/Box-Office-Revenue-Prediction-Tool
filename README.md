@@ -1,11 +1,15 @@
 # Box Office Revenue Prediction Tool
 Duke MIDS: Cloud Computing Final Project
-Ana Belen Barcenas (@abbarcenasj), Viggy Kumaresan (@viggykumaresan), Danny Witt (@drwitt)
+
+- Ana Belen Barcenas (@abbarcenasj)
+
+- Viggy Kumaresan (@viggykumaresan)
+
+- Danny Witt (@drwitt)
 
 Link: https://box-office-revenue-prediction.ue.r.appspot.com/
 
-![Website](images/website_screen.png)
-
+![Website](images/website_demo.png)
 
 ## Objective
 Build a machine learning prediction model, deploy it in Flask and Google App Engine, and integrate load testing into our deployment routine.
