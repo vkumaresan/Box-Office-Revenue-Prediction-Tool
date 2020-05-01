@@ -9,7 +9,7 @@ Duke MIDS: Cloud Computing Final Project
 
 Link: https://box-office-revenue-prediction.ue.r.appspot.com/
 
-![Website](images/website_demo.png)
+![Website](images/website_screen.png)
 
 ## Objective
 Build a machine learning prediction model, deploy it in Flask and Google App Engine, and integrate load testing into our deployment routine.
